@@ -1,0 +1,54 @@
+import './Skills.css'
+
+function Skills() {
+  const skillCategories = [
+    {
+      category: 'Programming Languages',
+      skills: ['Python', 'C++', 'JavaScript', 'SQL', 'R']
+    },
+    {
+      category: 'Frontend Development',
+      skills: ['React.js', 'Vite', 'HTML/CSS', 'JavaScript', 'Redux Toolkit']
+    },
+    {
+      category: 'Backend & Databases',
+      skills: ['Springboot', 'SQL', 'Python', 'REST APIs', 'System Design']
+    },
+    {
+      category: 'Data Science & AI',
+      skills: ['Machine Learning', 'Generative AI', 'Data Analytics', 'Google Cloud Gen AI']
+    },
+    {
+      category: 'Tools & Platforms',
+      skills: ['Git & GitHub', 'Google Cloud', 'Linux', 'Docker', 'RapidAPI']
+    },
+    {
+      category: 'Specializations',
+      skills: ['Full Stack Development', 'AI Integration', 'Data Analysis', 'Problem Solving']
+    }
+  ]
+
+  return (
+    <section id="skills" className="skills">
+      <div className="container">
+        <h2 className="section-title">Skills</h2>
+        <div className="skills-grid">
+          {skillCategories.map((category, idx) => (
+            <div key={idx} className="skill-category">
+              <h3>{category.category}</h3>
+              <div className="skill-list">
+                {category.skills.map((skill, i) => (
+                  <div key={i} className="skill-item">
+                    <span className="skill-name">{skill}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default Skills
