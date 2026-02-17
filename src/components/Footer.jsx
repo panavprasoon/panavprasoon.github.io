@@ -7,8 +7,7 @@ function Footer() {
     <footer className="footer">
       <div className="container">
         <div className="footer-content">
-          <p>&copy; {currentYear} Panav Prasoon Awasthi. All rights reserved.</p>
-          <p>Built with React + Vite | Software Developer | Innovator</p>
+          <p>If I take long to get back to you<br/>Feel Free to use LinkedIn</p>
         </div>
       </div>
     </footer>

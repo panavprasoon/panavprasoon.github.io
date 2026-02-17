@@ -21,6 +21,8 @@ function Contact() {
     e.preventDefault()
     // In a real application, you would send this data to a backend service
     console.log('Form submitted:', formData)
+    // show popup to user
+    alert('Thanks! for your interest')
     setSubmitted(true)
     setFormData({ name: '', email: '', message: '' })
     setTimeout(() => setSubmitted(false), 3000)
@@ -35,10 +37,6 @@ function Contact() {
             <div className="info-item">
               <h3>Email</h3>
               <p><a href="mailto:panavprasoonawasthi@gmail.com">panavprasoonawasthi@gmail.com</a></p>
-            </div>
-            <div className="info-item">
-              <h3>Phone</h3>
-              <p><a href="tel:+919412090780">+91 9412090780</a></p>
             </div>
             <div className="info-item">
               <h3>Location</h3>
