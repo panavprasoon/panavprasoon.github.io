@@ -6,6 +6,13 @@
     <title>Panav Prasoon</title>
   </head>
   <body>
+    <!-- Netlify form detection (hidden) -->
+    <form name="contact" method="POST" data-netlify="true" netlify style="display:none;">
+      <input type="hidden" name="form-name" value="contact" />
+      <input name="name" />
+      <input name="email" />
+      <textarea name="message"></textarea>
+    </form>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

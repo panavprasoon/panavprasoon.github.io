@@ -17,15 +17,32 @@ function Contact() {
     }))
   }
 
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&')
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault()
-    // In a real application, you would send this data to a backend service
-    console.log('Form submitted:', formData)
-    // show popup to user
-    alert('Thanks! for your interest')
-    setSubmitted(true)
-    setFormData({ name: '', email: '', message: '' })
-    setTimeout(() => setSubmitted(false), 3000)
+
+    const payload = { 'form-name': 'contact', ...formData }
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode(payload)
+    })
+      .then(() => {
+        alert("Thanks! for your interest in Panav Awasthi")
+        setSubmitted(true)
+        setFormData({ name: '', email: '', message: '' })
+        setTimeout(() => setSubmitted(false), 3000)
+      })
+      .catch((error) => {
+        console.error(error)
+        alert('Oops! There was a problem submitting your form. Please try again later.')
+      })
   }
 
   return (
@@ -52,7 +69,8 @@ function Contact() {
             </div>
           </div>
           
-          <form className="contact-form" onSubmit={handleSubmit}>
+          <form name="contact" method="POST" data-netlify="true" className="contact-form" onSubmit={handleSubmit}>
+            <input type="hidden" name="form-name" value="contact" />
             {submitted && (
               <div className="success-message">
                 ✓ Thank you! I'll get back to you soon.
