@@ -4,23 +4,23 @@ function Skills() {
   const skillCategories = [
     {
       category: 'Programming Languages',
-      skills: ['Python', 'C++', 'JavaScript', 'SQL', 'R']
+      skills: ['Python', 'C++', 'JavaScript', 'SQL']
     },
     {
       category: 'Frontend Development',
-      skills: ['React.js', 'Vite', 'HTML/CSS', 'JavaScript', 'Redux Toolkit']
+      skills: ['React.js',  'JavaScript']
     },
     {
       category: 'Backend & Databases',
-      skills: ['Springboot', 'SQL', 'Python', 'REST APIs', 'System Design']
+      skills: ['Springboot', 'SQL', 'REST APIs', 'System Design']
     },
     {
       category: 'Data Science & AI',
-      skills: ['Machine Learning', 'Generative AI', 'Data Analytics', 'Google Cloud Gen AI']
+      skills: ['Machine Learning', 'Generative AI', 'Data Analytics']
     },
     {
       category: 'Tools & Platforms',
-      skills: ['Git & GitHub', 'Google Cloud', 'Linux', 'Docker', 'RapidAPI']
+      skills: ['Git & GitHub','Docker',]
     },
     {
       category: 'Specializations',

@@ -4,8 +4,7 @@ function Hero() {
   return (
     <section id="home" className="hero">
       <div className="hero-content">
-        <h1 className="hero-title">Computer Engineer | Software Developer | AI Enthusiast</h1>
-        <p className="hero-subtitle">Full Stack Web Development | Data Science | Machine Learning</p>
+        <h1 className="hero-title">Software Developer<br />AI/ML & Data Science<br />Building Scalable Applications</h1>
         <p className="hero-description">
           Passionate about building innovative solutions using cutting-edge technologies and AI to solve real-world problems
         </p>

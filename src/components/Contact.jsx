@@ -42,7 +42,7 @@ function Contact() {
             </div>
             <div className="info-item">
               <h3>Location</h3>
-              <p>India</p>
+              <p>Hyderabad, India</p>
             </div>
             <div className="info-item">
               <h3>Social Links</h3>

@@ -22,8 +22,15 @@ function About() {
             </p>
           </div>
           <div className="about-image-placeholder">
-            <div className="placeholder">
-              📸 Your Photo
+            <img 
+              src="/profile.jpg" 
+              alt="Panav Prasoon Awasthi" 
+              className="profile-image"
+              onLoad={(e) => {if (e.target.nextElementSibling) e.target.nextElementSibling.style.display = 'none'}}
+              onError={(e) => {e.target.style.display = 'none'; if (e.target.nextElementSibling) e.target.nextElementSibling.style.display = 'flex'}}
+            />
+            <div className="placeholder" id="imagePlaceholder">
+              📸 Profile Photo
             </div>
           </div>
         </div>
